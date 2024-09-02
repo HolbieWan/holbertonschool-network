@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# TCP box: It is a protocol that is transferring data in a slow way but surely
+1
+# UDP box: It is a protocol that is transferring data in a fast way and might loss data along in the process
+2
+# TCP worker: Have you received boxes x, y, z?
+1
