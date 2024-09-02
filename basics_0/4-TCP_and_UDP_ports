@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# script that displays listening ports that only shows listening sockets
+netstat -l
+# script that displays listening ports that shows the PID and name of the program to which each socket belongs
+netstat -tulnp
+# -t: Show TCP sockets.
+# -u: Show UDP sockets.
+# -l: Show only listening sockets.
+# -n: Show numerical addresses instead of resolving hostnames.
+# -p: Show the PID and name of the program to which each socket belongs.
