@@ -1,0 +1,4 @@
+#!/bin/bash
+# Add the new entries to /etc/hosts
+bash -c 'echo "127.0.0.2    localhost" >> /etc/hosts'
+bash -c 'echo "8.8.8.8      facebook.com" >> /etc/hosts'

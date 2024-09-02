@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Restore localhost to original
+if [ -f /etc/hosts.backup ]; then
+    # Restore the original hosts file from backup
+    mv /etc/hosts.backup /etc/hosts
+    echo "The /etc/hosts file has been restored to its previous state."
+else
+    echo "Backup file not found, restoring localhost manually."
+    sed -i 's/127.0.0.2/127.0.0.1/' /etc/hosts
+fi
+
+# Modify the facebook.com entry
+sed -i '/facebook.com/d' /etc/hosts
+bash -c 'echo "157.240.202.35      facebook.com" >> /etc/hosts'
+
+# Verify the changes
+echo "The /etc/hosts file has been updated:"
+grep "localhost" /etc/hosts
+grep "facebook.com" /etc/hosts
+
+echo "Script execution completed."
